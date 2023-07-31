@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles.css" />
+    <script src="https://kit.fontawesome.com/7897856c57.js" crossorigin="anonymous"></script>
+    <title>SoulSwitch</title>
+</head>
+
+<body>
+
+    <div class="mailing-list">
+        <form onsubmit="handleEmailSubmit();">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="mlist" placeholder="Email Address" />
+            <button id="mailing-btn" class="mailing-btn">Get Updates</button>
+        </form>
+    </div>
+
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Merch</a>
+        <a href="#">Tickets</a>
+        <a href="#">Streaming</a>
+    </div>
+
+    <main>
+        <div class="title">
+            <h1></h1>
+        </div>
+        <div class="Videos">
+            <table class="upcoming-shows">
+                <tr class="table-header">
+                    <th>Location</th>
+                    <th>Venue</th>
+                    <th>Date</th>
+                </tr>
+
+                <tr>
+                    <th>Swindon UK</th>
+                    <th>Level III</th>
+                    <th>08/18/23</th>
+                </tr>
+                <tr>
+                    <th>Cambridge</th>
+                    <th>The Six Six Bar</th>
+                    <th>08/19/23</th>
+                </tr>
+                <tr>
+                    <th>Bournemouth</th>
+                    <th>Anvil RockBar</th>
+                    <th>08/23/23</th>
+                </tr>
+                <tr>
+                    <th>Bristol</th>
+                    <th>The Gryphon</th>
+                    <th>08/24/23</th>
+                </tr>
+                <tr>
+                    <th>Wolverhampton</th>
+                    <th>The Giffard Arms</th>
+                    <th>08/25/23</th>
+                </tr>
+                <tr>
+                    <th>Leicestershire</th>
+                    <th>The Victoria Bikers Pub</th>
+                    <th>08/26/23</th>
+                </tr>
+                <tr class="HHG">
+                    <th>Sheffield</th>
+                    <th>02 Academy Sheffield(H&HG Only)</th>
+                    <th>08/07/23</th>
+                </tr>
+                <tr>
+                    <th>Manchester</th>
+                    <th>Rebellion</th>
+                    <th>08/29/23</th>
+                </tr>
+                <tr>
+                    <th>Llandudno</th>
+                    <th>The Motorsports Lounge</th>
+                    <th>08/30/23</th>
+                </tr>
+                <tr>
+                    <th>Cardiff</th>
+                    <th>Fuel Rock Club</th>
+                    <th>09/01/23</th>
+                </tr>
+                <tr>
+                    <th>Kent</th>
+                    <th>Sandwich Rock Club</th>
+                    <th>09/02/23</th>
+                </tr>
+
+            </table>
+            <!-- <h1>Videos</h1> -->
+        </div>
+        <div class="videostream">
+            <iframe width="620" height="450" src="https://www.youtube.com/embed/LIqTJ5DorPM?autoplay=0&mute=0">
+            </iframe>
+            <iframe width="620" height="450" src="https://www.youtube.com/embed/2zfPDy8r05I?autoplay:0&mute=0">
+            </iframe>
+            <br>
+            <iframe width="620" height="450" src="https://www.youtube.com/embed/tAWKSvun3g8?autoplay:0&mute=0">
+            </iframe>
+            <iframe width="620" height="450" src="https://www.youtube.com/embed/SIQBALStJIs?autoplay:0&muted=0">
+            </iframe>
+        </div>
+    </main>
+
+    <!-- Add the following JavaScript code within the <script> tag or in an external JS file -->
+    <script>
+        window.onscroll = function () {
+            var table = document.querySelector('.upcoming-shows');
+            var bounding = table.getBoundingClientRect();
+
+            // If the table is in the viewport, add the blurred background class to the body element
+            if (bounding.top <= window.innerHeight && bounding.bottom >= 0) {
+                document.body.classList.add('blurred-background');
+            } else {
+                // Remove the blurred background class when the table is out of the viewport
+                document.body.classList.remove('blurred-background');
+            }
+
+            // If the user has scrolled back to the top, remove the blurred background class
+            if (window.scrollY === 0) {
+                document.body.classList.remove('blurred-background');
+            }
+        };
+
+        const submitButton = document.getElementById("mailing-btn")
+        const userInput = document.getElementById("mlist")
+        function handleEmailSubmit() {
+            const inputData = userInput.value;
+            console.log(inputData);
+        }
+
+        submitButton.addEventListener('click', handleEmailSubmit);
+    </script>
+
+
+</body>
+
+</html>

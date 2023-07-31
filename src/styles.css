@@ -1,0 +1,125 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url("/src/images/soulswitch.png");
+    /* background-image: url("/static/images/soulswitch.png"); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    padding: 5%;
+}
+
+.navbar>a {
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+}
+
+.navbar>a:hover {
+    color: rgb(224, 222, 222);
+}
+
+.center-container {
+    color: white;
+}
+
+.mailing-list {
+    padding-top: 25px;
+    padding-right: 30px;
+    display: flex;
+    color: white;
+    justify-content: flex-end;
+}
+
+/* Find out why text-doecoration-lin is not working */
+#mlist {
+    padding: 5px;
+    text-decoration-line: underline;
+    text-decoration-color: white;
+}
+
+.mailing-btn {
+    padding: 5px;
+}
+
+main {
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    width: 100%;
+}
+
+main>.Videos {
+    text-align: left;
+    padding-left: 20%;
+    overflow: auto;
+}
+
+.title {
+    padding-bottom: 15%;
+}
+
+.Videos {
+    padding-top: 150px;
+    color: rgb(224, 222, 222);
+}
+
+.videostream {
+    padding-top: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+tr {
+    margin-bottom: 10px;
+}
+
+table.upcoming-shows tr.table-header th {
+    border-bottom: 2px solid red;
+}
+
+th,
+td {
+    font-weight: bolder;
+    padding: 8px;
+    text-align: left;
+}
+
+input {
+    border-radius: 4px;
+}
+
+
+
+.HHG>th {
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+
+tr:hover {
+    color: rgb(136, 136, 136);
+    font-weight: 900;
+}
+
+.blurred-background {
+    backdrop-filter: blur(5px);
+    /* Adjust the blur strength as needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the background color and opacity as needed */
+}
