@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
     <link rel="stylesheet" href="/src/styles.css" />
     <script src="https://kit.fontawesome.com/7897856c57.js" crossorigin="anonymous"></script>
     <title>SoulSwitch</title>
@@ -12,9 +13,9 @@
 <body>
 
     <div class="mailing-list">
-        <form onsubmit="handleEmailSubmit();">
+        <form action="/emailSignUp" method="POST">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" id="mlist" placeholder="Email Address" />
+            <input type="text" id="mlist" name="mlist" placeholder="Email Address" />
             <button id="mailing-btn" class="mailing-btn">Get Updates</button>
         </form>
     </div>
@@ -129,15 +130,6 @@
                 document.body.classList.remove('blurred-background');
             }
         };
-
-        const submitButton = document.getElementById("mailing-btn")
-        const userInput = document.getElementById("mlist")
-        function handleEmailSubmit() {
-            const inputData = userInput.value;
-            console.log(inputData);
-        }
-
-        submitButton.addEventListener('click', handleEmailSubmit);
     </script>
 
 
