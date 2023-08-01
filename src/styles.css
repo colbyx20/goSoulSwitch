@@ -2,7 +2,6 @@ body {
     margin: 0px;
     padding: 0px;
     background-image: url("/src/images/soulswitch.png");
-    /* background-image: url("/static/images/soulswitch.png"); */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -49,9 +48,27 @@ body {
     text-decoration-color: white;
 }
 
-.mailing-btn {
-    padding: 5px;
+form>button {
+    /* padding: 5px; */
+    padding: 4px 10px;
+    font-size: 16px;
+    color: #dc3545;
+    border: 2px solid #dc3545;
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
+
+form>button:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+form>button:focus {
+    outline: none;
+}
+
 
 main {
     width: 50%;
@@ -122,4 +139,9 @@ tr:hover {
     /* Adjust the blur strength as needed */
     background-color: rgba(0, 0, 0, 0.5);
     /* Adjust the background color and opacity as needed */
+}
+
+td>button {
+    padding: 8px;
+    width: 8rem;
 }

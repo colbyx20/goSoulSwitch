@@ -9,6 +9,14 @@ import (
 	"github.com/gorilla/mux"
 )
 
+var Shows struct {
+	location string
+	venue    string
+	date     string
+}
+
+var MailingList []string
+
 var homeTemplate *template.Template
 
 func renderHTMLTemplate(w http.ResponseWriter, tmpl *template.Template, data interface{}) {
@@ -31,8 +39,13 @@ func EnterEmail(w http.ResponseWriter, r *http.Request) {
 	}
 
 	email := r.FormValue("mlist")
-	fmt.Println(email)
+	MailingList = append(MailingList, email)
+	// fmt.Println(email)
 
+	for _, val := range MailingList {
+		fmt.Printf("%v\n", val)
+	}
+	// fmt.Println(MailingList)
 	data := struct{}{}
 
 	renderHTMLTemplate(w, homeTemplate, data)
