@@ -145,3 +145,57 @@ td>button {
     padding: 8px;
     width: 8rem;
 }
+
+.spotify-stream {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.display-cd {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    color: white;
+    /* border: 3px solid red; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 10); */
+}
+
+.display-cd>img {
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.display-cd img {
+    transition: transform 0.3s;
+    /* Add a smooth transition for the image swap */
+}
+
+.display-cd img:hover {
+    transform: scale(1.1);
+}
+
+.spotify-announce {
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+
+.spotify-announce-container {
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+    border: 5px solid black;
+    font-size: xxx-large
+}
+
+.logl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
