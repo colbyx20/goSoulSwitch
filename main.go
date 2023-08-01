@@ -9,13 +9,26 @@ import (
 	"github.com/gorilla/mux"
 )
 
-var Shows struct {
+type Shows struct {
 	location string
 	venue    string
 	date     string
 }
 
 var MailingList []string
+var ShowsList = []Shows{
+	{"Swindon UK", "Level III", "08/18/23"},
+	{"Cambridge", "The Six Six Bar", "08/19/2023"},
+	{"Bournemouth", "Anvil RockBar", "08/23/23"},
+	{"Bristol", "The Gryphon", "08/24/23"},
+	{"Wolverhampton", "the Giffard Arms", "08/25/23"},
+	{"Leicestershire", "the Victoria Bikers Pub", "08/26/23"},
+	{"Sheffield", "02 Academy Sheffield (H&HG Only)", "08/27/23"},
+	{"Manchester", "Rebellion", "08/29/23"},
+	{"Llandudno", "The Motorsports Lounge", "08/30/23"},
+	{"Cardiff", "Fuel Rock Club", "09/01/2023"},
+	{"Kent", "Sandwich Rock Club", "09/02/2023"},
+}
 
 var homeTemplate *template.Template
 
@@ -27,9 +40,9 @@ func renderHTMLTemplate(w http.ResponseWriter, tmpl *template.Template, data int
 
 func HomeRender(w http.ResponseWriter, r *http.Request) {
 
-	data := struct{}{}
+	// data := struct{}{}
 
-	renderHTMLTemplate(w, homeTemplate, data)
+	renderHTMLTemplate(w, homeTemplate, ShowsList)
 }
 
 func EnterEmail(w http.ResponseWriter, r *http.Request) {
@@ -45,10 +58,10 @@ func EnterEmail(w http.ResponseWriter, r *http.Request) {
 	for _, val := range MailingList {
 		fmt.Printf("%v\n", val)
 	}
-	// fmt.Println(MailingList)
-	data := struct{}{}
+	// initialize blank struct
+	// data := struct{}{}
 
-	renderHTMLTemplate(w, homeTemplate, data)
+	renderHTMLTemplate(w, homeTemplate, ShowsList)
 }
 
 func main() {
