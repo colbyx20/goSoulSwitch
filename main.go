@@ -39,9 +39,6 @@ func renderHTMLTemplate(w http.ResponseWriter, tmpl *template.Template, data int
 }
 
 func HomeRender(w http.ResponseWriter, r *http.Request) {
-
-	// data := struct{}{}
-
 	renderHTMLTemplate(w, homeTemplate, ShowsList)
 }
 
