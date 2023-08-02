@@ -19,9 +19,10 @@ var MailingList []string
 var ShowsList = []Shows{
 	{"Swindon UK", "Level III", "08/18/23"},
 	{"Cambridge", "The Six Six Bar", "08/19/23"},
+	{"Bridgewater", "Cobblestones", "08/22/23"},
 	{"Bournemouth", "Anvil RockBar", "08/23/23"},
 	{"Bristol", "The Gryphon", "08/24/23"},
-	{"Wolverhampton", "the Giffard Arms", "08/25/23"},
+	{"Brimingham", "Subside Bar", "08/25/23"},
 	{"Leicestershire", "the Victoria Bikers Pub", "08/26/23"},
 	{"Sheffield", "02 Academy Sheffield (H&HG Only)", "08/27/23"},
 	{"Manchester", "Rebellion", "08/29/23"},
@@ -50,13 +51,10 @@ func EnterEmail(w http.ResponseWriter, r *http.Request) {
 
 	email := r.FormValue("mlist")
 	MailingList = append(MailingList, email)
-	// fmt.Println(email)
 
 	for _, val := range MailingList {
 		fmt.Printf("%v\n", val)
 	}
-	// initialize blank struct
-	// data := struct{}{}
 
 	renderHTMLTemplate(w, homeTemplate, ShowsList)
 }
