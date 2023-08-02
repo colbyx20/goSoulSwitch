@@ -18,7 +18,7 @@ type Shows struct {
 var MailingList []string
 var ShowsList = []Shows{
 	{"Swindon UK", "Level III", "08/18/23"},
-	{"Cambridge", "The Six Six Bar", "08/19/2023"},
+	{"Cambridge", "The Six Six Bar", "08/19/23"},
 	{"Bournemouth", "Anvil RockBar", "08/23/23"},
 	{"Bristol", "The Gryphon", "08/24/23"},
 	{"Wolverhampton", "the Giffard Arms", "08/25/23"},
@@ -26,8 +26,8 @@ var ShowsList = []Shows{
 	{"Sheffield", "02 Academy Sheffield (H&HG Only)", "08/27/23"},
 	{"Manchester", "Rebellion", "08/29/23"},
 	{"Llandudno", "The Motorsports Lounge", "08/30/23"},
-	{"Cardiff", "Fuel Rock Club", "09/01/2023"},
-	{"Kent", "Sandwich Rock Club", "09/02/2023"},
+	{"Cardiff", "Fuel Rock Club", "09/01/23"},
+	{"Kent", "Sandwich Rock Club", "09/02/23"},
 }
 
 var homeTemplate *template.Template
