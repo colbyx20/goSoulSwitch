@@ -10,9 +10,9 @@ import (
 )
 
 type Shows struct {
-	location string
-	venue    string
-	date     string
+	Location string
+	Venue    string
+	Date     string
 }
 
 var MailingList []string

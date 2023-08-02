@@ -26,7 +26,6 @@
         <a href="">Photos</a>
         <a href="">Streaming</a>
     </div>
-
     <main>
         <div class="title">
             <h1></h1>
@@ -39,76 +38,15 @@
                     <th>Date</th>
                     <th>RSVP</th>
                 </tr>
-
+                {{range .}}
                 <tr>
-                    <td>Swindon UK</td>
-                    <td>Level III</td>
-                    <td>08/18/23</td>
+                    <td>{{.Location}}</td>
+                    <td>{{.Venue}}</td>
+                    <td>{{.Date}}</td>
                     <td><button>RSVP</button></td>
                 </tr>
-                <tr>
-                    <td>Cambridge</td>
-                    <td>The Six Six Bar</td>
-                    <td>08/19/23</td>
-                    <td><button>RSVP</button></td>
-                </tr>
-                <tr>
-                    <td>Bournemouth</td>
-                    <td>Anvil RockBar</td>
-                    <td>08/23/23</td>
-                    <td><button>RSVP</button></td>
-                </tr>
-                <tr>
-                    <td>Bristol</td>
-                    <td>The Gryphon</td>
-                    <td>08/24/23</td>
-                    <td><button>RSVP</button></td>
-                </tr>
-                <tr>
-                    <td>Wolverhampton</td>
-                    <td>The Giffard Arms</td>
-                    <td>08/25/23</td>
-                    <td><button>RSVP</button></td>
-                </tr>
-                <tr>
-                    <td>Leicestershire</td>
-                    <td>The Victoria Bikers Pub</td>
-                    <td>08/26/23</td>
-                    <td><button>RSVP</button></td>
-                </tr>
-                <tr class="HHG">
-                    <td>Sheffield</td>
-                    <td>02 Academy Sheffield(H&HG)</td>
-                    <td>08/27/23</td>
-                    <td><button>RSVP</button></td>
-                </tr>
-                <tr>
-                    <td>Manchester</td>
-                    <td>Rebellion</td>
-                    <td>08/29/23</td>
-                    <td><button>RSVP</button></td>
-                </tr>
-                <tr>
-                    <td>Llandudno</td>
-                    <td>The Motorsports Lounge</td>
-                    <td>08/30/23</td>
-                    <td><button>RSVP</button></td>
-                </tr>
-                <tr>
-                    <td>Cardiff</td>
-                    <td>Fuel Rock Club</td>
-                    <td>09/01/23</td>
-                    <td><button>RSVP</button></td>
-                </tr>
-                <tr>
-                    <td>Kent</td>
-                    <td>Sandwich Rock Club</td>
-                    <td>09/02/23</td>
-                    <td><button>RSVP</button></td>
-                </tr>
-
+                {{end}}
             </table>
-            <!-- <h1>Videos</h1> -->
         </div>
         <div class="videostream">
             <iframe width="620" height="450" src="https://www.youtube.com/embed/LIqTJ5DorPM?autoplay=0&mute=0">
