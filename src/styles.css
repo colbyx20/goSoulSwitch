@@ -159,6 +159,7 @@ td>button:hover {
     justify-content: center;
     width: 100%;
     padding-bottom: 10px;
+    padding-top: 2rem;
 }
 
 .display-cd {
@@ -186,11 +187,11 @@ td>button:hover {
     transform: scale(1.1);
 }
 
-.spotify-announce {
+/* .spotify-announce {
     display: flex;
     justify-content: center;
     color: red;
-}
+} */
 
 
 .spotify-announce-container {
@@ -206,4 +207,16 @@ td>button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.logl::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media screen and(max-width:600px) {
+    .main {
+        width: 100%;
+    }
 }
