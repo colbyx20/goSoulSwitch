@@ -215,8 +215,8 @@ td>button:hover {
     display: table;
 }
 
-@media screen and(max-width:600px) {
+/* @media screen and(max-width:600px) {
     .main {
         width: 100%;
     }
-}
+} */
